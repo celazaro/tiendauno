@@ -114,15 +114,15 @@ async function listarProductos() {
         autoplay: {
           delay: 4000,
         },
-        effect: 'cube', // 👈 cambia el tipo de transición aquí  (slide, fade, cube, coverflow, flip)
+        effect: 'fade', // 👈 cambia el tipo de transición aquí  (slide, fade, cube, coverflow, flip)
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
 
-        /*       fadeEffect: {
-        crossFade: true, // opcional: mezcla los slides al cambiar
-      }, */
+        fadeEffect: {
+          crossFade: true, // opcional: mezcla los slides al cambiar
+        },
 
 /*       cubeEffect: {
           shadow: true,
