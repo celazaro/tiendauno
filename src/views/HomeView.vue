@@ -1,60 +1,62 @@
-
 <template>
 
   <!-- Testimonials Section -->
   <section id="testimonials" class="testimonials section light-background  vh-100  p-4">
 
-    <div class="container-fluid ">
+    <div class="container-fluid row align-items-center">
+      <h2 class="text-center">ENCUENTRE AQUÍ LOS MEJORES PRECIOS</h2>
+      <div class="col-lg-8">
+        <div class="table-wrapper">
+          <table class="table table-striped table-bordered custom-table">
+            <thead class="text-center">
+              <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Unidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="prod in productos" :key="prod.id">
+                <td>{{ prod.nombre }}</td>
+                <td class="text-center">{{ formatCurrency(prod.precio) }}</td>
+                <td class="text-center">{{ prod.precio_tipo_descripcion }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-      <div class="testimonials-slider swiper my-swiper">
+      </div>
 
-        <div class="swiper-wrapper" >
- 
-          <div class="swiper-slide " v-for="producto in productos" :key="producto.id">
-            <div class="testimonial-item">
-              <div class="row align-items-center">
-                <h2 class="text-center">ENCUENTRE AQUÍ LOS MEJORES PRECIOS</h2>
-                <div class="col-lg-8">
-                  
-                  <div class="table-wrapper">
-                    <table class="table table-striped table-bordered custom-table">
-                      <thead class="text-center">
-                        <tr>
-                          <th>Producto</th>
-                          <th>Precio</th>
-                          <th>Unidad</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr v-for="prod in productos" :key="prod.id">
-                          <td>{{ prod.nombre }}</td>
-                          <td class="text-center">{{ formatCurrency(prod.precio) }}</td>
-                          <td class="text-center">{{ prod.precio_tipo_descripcion }}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  
-                </div>  
-                <div class="col-lg-4 d-none d-lg-block flex-column justify-content-center align-items-center ">
-                  <div class="featured-img-wrapper  ">
-                    <img :src="`${producto.imagen}`" class="featured-img " alt="">
-                  </div>
-                  <div class="text-center mt-2">
-                    <p>
-                      {{ producto.nombre}}
-                      <br></br>
-                      {{ producto.descripcion }}
-                    </p>
+      <div class="col-lg-4">
+        <div class="testimonials-slider swiper my-swiper ">
+
+          <div class="swiper-wrapper" >
+  
+            <div class="swiper-slide " v-for="producto in productos" :key="producto.id">
+              <div class="testimonial-item">
+                <div class="align-items-center">
+                  <div class=" d-none d-lg-block flex-column justify-content-center align-items-center ">
+                    <div class="featured-img-wrapper  ">
+                      <img :src="`${producto.imagen}`" class="featured-img " alt="">
+                    </div>
+                    <div class="text-center mt-2">
+                      <p>
+                        {{ producto.nombre}}
+                        <br></br>
+                        {{ producto.descripcion }}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div><!-- End Testimonial Item -->
+            </div><!-- End Testimonial Item -->
+
+          </div>
 
         </div>
 
       </div>
+
 
     </div>
 
@@ -110,11 +112,11 @@ async function listarProductos() {
       new window.Swiper('.my-swiper', {
         slidesPerView: 1,
         loop: true,
-        speed: 1000,
+        speed: 2000,
         autoplay: {
-          delay: 4000,
+          delay: 5000,
         },
-        effect: 'fade', // 👈 cambia el tipo de transición aquí  (slide, fade, cube, coverflow, flip)
+        effect: 'cube', // 👈 cambia el tipo de transición aquí  (slide, fade, cube, coverflow, flip)
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
