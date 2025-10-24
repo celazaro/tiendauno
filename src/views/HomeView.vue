@@ -27,7 +27,7 @@
 
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-4 m-0 p-0">
         <div class="testimonials-slider swiper my-swiper ">
 
           <div class="swiper-wrapper" >
