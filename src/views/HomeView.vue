@@ -1,11 +1,11 @@
 <template>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials section light-background  vh-100  p-4">
+  <section id="testimonials" class="testimonials section light-background  vh-100  p-0">
 
-    <div class="container-fluid row align-items-center">
+    <div class="container-fluid row align-items-center p-2">
       <h2 class="text-center">ENCUENTRE AQUÍ LOS MEJORES PRECIOS</h2>
-      <div class="col-lg-8">
+      <div class="col-lg-7">
         <div class="table-wrapper">
           <table class="table table-striped table-bordered custom-table">
             <thead class="text-center">
@@ -27,8 +27,8 @@
 
       </div>
 
-      <div class="col-lg-4 m-0 p-0">
-        <div class="testimonials-slider swiper my-swiper ">
+      <div class="col-lg-5">
+        <div class="testimonials-slider swiper my-swiper">
 
           <div class="swiper-wrapper" >
   
@@ -36,7 +36,7 @@
               <div class="testimonial-item">
                 <div class="align-items-center">
                   <div class=" d-none d-lg-block flex-column justify-content-center align-items-center ">
-                    <div class="featured-img-wrapper  ">
+                    <div class="featured-img-wrapper">
                       <img :src="`${producto.imagen}`" class="featured-img " alt="">
                     </div>
                     <div class="text-center mt-2">
