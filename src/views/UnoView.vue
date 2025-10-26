@@ -20,8 +20,8 @@
               <div class="table-wrap-full">
                 <h2 class="table-title">Listado completo de productos</h2>
                 <div class="table-scroll">
-                  <table class="full-table  table-bordered custom-table" >
-                    <thead class="text-center">
+                  <table class="full-table">
+                    <thead>
                       <tr><th>Producto</th><th>Precio</th><th>Unidad</th></tr>
                     </thead>
                     <tbody>
@@ -405,20 +405,5 @@ onMounted(() => {
 /* responsive: if width smaller than height-based 16:9 calc, use full width */
 @media (max-width: 1200px) {
   .screen-16-9 { width: 100%; height: calc(100vw * 9 / 16); aspect-ratio: 16/9; }
-}
-
-/* Mantener la tabla legible: ajustar fuente según lo tengas */
-.custom-table {
-  font-size: 1.0rem;
-}
-
-/* Centrar encabezados y columnas de números (ya lo tenías) */
-.custom-table th {
-  text-align: center;
-  vertical-align: middle;
-}
-.custom-table td.text-center {
-  text-align: center;
-  vertical-align: middle;
 }
 </style>
